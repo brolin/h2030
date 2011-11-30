@@ -1,0 +1,167 @@
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+header {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  font: 90% / 1.5 Helvetica, Arial, "Lucida Grande", "Lucida Sans", Tahoma, Verdana, sans-serif;
+  background-image: url("/images/patternAzul.png");
+}
+.container {
+  margin: 0 auto;
+  width: 974px;
+}
+.header {
+  background-image: url("/images/patternVerde.png");
+}
+.header img {
+  padding-top: 30px;
+}
+.navigation {
+  float: left;
+  width: 100%;
+  background-image: url("/images/patternNaranja.png");
+}
+.navigation ul {
+  margin: 0;
+  padding: 0;
+}
+.navigation ul li {
+  list-style-type: none;
+  display: inline;
+}
+.navigation li a {
+  display: block;
+  float: left;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid #fff;
+}
+.navigation li a:hover {
+  background: #537b3f;
+}
+.content-container1 {
+  float: left;
+  width: 100%;
+  background: #fff;
+  text-align: justify;
+}
+.content-container2 {
+  float: left;
+  width: 100%;
+  background: #fff;
+  text-align: justify;
+}
+.section-navigation {
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  width: 16%;
+  padding: 20px 0;
+  margin: 0 2%;
+  display: table-cell;
+  background-image: url("/images/patternAzul.png");
+}
+.section-navigation ul {
+  display: table-cell;
+  margin: 0;
+  padding: 0;
+}
+.section-navigation ul li {
+  display: block;
+  margin: 0 0 1em;
+  padding: 0;
+  list-style-type: none;
+}
+.section-navigation li a {
+  display: block;
+  float: left;
+  padding: 5px 10px;
+  color: #fff;
+  text-decoration: none;
+  border-right: 1px solid 0;
+}
+.section-navigation li a:hover {
+  background: #537b3f;
+}
+.content {
+  float: left;
+  width: 54%;
+  padding: 20px 0;
+  margin: 0 0 0 2%;
+}
+.content h2 {
+  margin: 0;
+}
+.aside {
+  float: right;
+  width: 19%;
+  padding: 1%;
+  margin: 0 0 0 1%;
+  display: inline;
+  background-image: url("/images/patternVerde.png");
+  color: #fff;
+}
+.footer {
+  clear: both;
+  padding-top: 10px;
+  text-align: right;
+}
