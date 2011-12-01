@@ -3,6 +3,8 @@
 nodemon-ignore
 node_modules
 public/documentos
+public/images/Fotos
+public/images/Mapas
 logs
 pids
 *~

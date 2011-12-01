@@ -165,3 +165,17 @@ body {
   padding-top: 10px;
   text-align: right;
 }
+a img {
+  float: left;
+}
+.docs {
+  display: block;
+}
+a.mapas img {
+  border: 5px;
+  display: block;
+  float: none;
+}
+a.grouped_elements img {
+  margin: 1px;
+}
