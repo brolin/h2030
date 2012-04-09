@@ -71,6 +71,25 @@ app.get('/Contactenos', function(req, res){
   });
 });
 
+app.get('/LineaTiempo', function(req, res){
+  res.render('LineaTiempo', {
+      title: 'Línea de tiempo de antecedentes en planificación',
+      layout: false
+  });
+});
+
+app.get('/LineaTiempo2', function(req, res){
+  res.render('LineaTiempo2', {
+      title: 'Línea de tiempo de antecedentes en planificación',
+      layout: false
+  });
+});
+
+app.get('/timelines', function(req,res) {
+    res.send(require('./data/tldata'));
+});
+
+
 // Only listen on $ node app.js
 
 cluster(app)

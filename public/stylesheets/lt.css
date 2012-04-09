@@ -1,0 +1,274 @@
+/* Reset
+Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+Removed elements not supported in HTML5
+-----------------------------------------------------------------------------*/
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+/* 
+Trigger the new block level elements in to the correct content flow
+-----------------------------------------------------------------------------*/
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* Timeline
+-----------------------------------------------------------------------------*/
+.item-1 {
+  background-color: #22bebe;
+}
+.item-1 .name {
+  background-color: #22bebe;
+}
+.item-2 {
+  background-color: #ff4040;
+}
+.item-2 .name {
+  background-color: #ff4040;
+}
+.item-3 {
+  background-color: #8144d6;
+}
+.item-3 .name {
+  background-color: #8144d6;
+}
+.item-4 {
+  background-color: #59ea3a;
+}
+.item-4 .name {
+  background-color: #59ea3a;
+}
+.item-5 {
+  background-color: #4284d3;
+}
+.item-5 .name {
+  background-color: #4284d3;
+}
+.item-6 {
+  background-color: #ffc140;
+}
+.item-6 .name {
+  background-color: #ffc140;
+}
+body {
+  background-color: #666;
+}
+header {
+  float: left;
+  width: 100%;
+  background-color: #666;
+  color: #fff;
+  position: relative;
+  top: 0;
+}
+header p.title {
+  margin: 5px;
+  font-size: 14px;
+}
+.timelines-list {
+  float: left;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.timelines-list ul {
+  margin: 0;
+  padding: 0;
+  height: 30%;
+}
+.timelines-list .timeline-item {
+  display: block;
+  border: 1px solid #aaa;
+  padding: 15px;
+  width: 100%;
+}
+.timelines-list .timeline-item p.name {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 10px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  color: #fff;
+}
+.timelines-list .timeline-item div.event {
+  font-size: 12px;
+  box-shadow: 0px 0px 6px #505050;
+  display: inline-table;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  margin: 3px;
+  padding: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eee, #ccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(1, #ccc));
+  background-image: -webkit-linear-gradient(top, #eee, #ccc);
+  background-image: -moz-linear-gradient(top, #eee, #ccc);
+  background-image: -ms-linear-gradient(top, #eee, #ccc);
+  background-image: -o-linear-gradient(top, #eee, #ccc);
+}
+/*
+ Darle estilo a el title de un elemento http://stackoverflow.com/questions/2011142/how-to-change-the-style-of-title-attribute-inside-the-anchor-tag 
+*/
+div.event:hover {
+  color: #f00;
+  font-size: 14px;
+  position: relative;
+}
+div.event[title]:hover:after {
+  font-size: 14px;
+  content: attr(title);
+  padding: 4px 8px;
+  color: #333;
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  z-index: 20px;
+  -moz-border-radius-topleft: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0px 0px 4px #222;
+  -webkit-box-shadow: 0px 0px 4px #222;
+  box-shadow: 0px 0px 4px #222;
+  background-image: -moz-linear-gradient(top, #eee, #ccc);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #eee), color-stop(1, #ccc));
+  background-image: -webkit-linear-gradient(top, #eee, #ccc);
+  background-image: -moz-linear-gradient(top, #eee, #ccc);
+  background-image: -ms-linear-gradient(top, #eee, #ccc);
+  background-image: -o-linear-gradient(top, #eee, #ccc);
+}
+.timelines-control {
+  position: relative;
+  float: left;
+  bottom: 0px;
+  width: 100%;
+  background-color: #666;
+}
+.timelines-control ul {
+  float: left;
+  color: #fff;
+  width: 100%;
+}
+.timelines-control ul p {
+  margin: 5px;
+  font-size: 14px;
+}
+.timelines-control ul li {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+/*
+.span-control
+  position: relative
+  height: 3%
+  width: 20%
+  border: 2px solid black
+  background: transparent
+*/
+.ui-dialog-content p {
+  font-size: 12px;
+}
+.ui-dialog-content p.antecedentes {
+  font-weight: bold;
+}
+.ui-dialog-content p.sintesis {
+  text-align: justify;
+}
+.ui-dialog-content p.dptal {
+  display: inline;
+}
+.ui-dialog-content p.oriente {
+  display: inline;
+}
+.ui-dialog-content p.occidente {
+  display: inline;
+}
+.ui-dialog-content p.aburra {
+  display: inline;
+}

@@ -1,0 +1,216 @@
+/* Reset
+Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+Removed elements not supported in HTML5
+-----------------------------------------------------------------------------*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strike, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+  margin 0
+  padding 0
+  border 0
+  outline 0
+  font-size 100%
+  vertical-align baseline
+  
+/* 
+Trigger the new block level elements in to the correct content flow
+-----------------------------------------------------------------------------*/
+article, aside, dialog, figure, 
+footer, header, hgroup, menu, 
+nav, section  
+  display block 
+      
+////////////////////////////////////////////////
+//                   UTILS    
+////////////////////////////////////////////////
+
+
+bx-shadow(shw-size, shw-color)
+  -moz-box-shadow: 0px 0px shw-size shw-color
+  -webkit-box-shadow: 0px 0px shw-size shw-color
+  box-shadow: 0px 0px shw-size shw-color
+
+bg-gradient(color1,color2)
+  background-image: -moz-linear-gradient(top, color1, color2)
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, color1),color-stop(1, color2))
+  background-image: -webkit-linear-gradient(top, color1, color2)
+  background-image: -moz-linear-gradient(top, color1, color2)
+  background-image: -ms-linear-gradient(top, color1, color2)
+  background-image: -o-linear-gradient(top, color1, color2)
+
+corner-each(tl, tr, br, bl)
+  -moz-border-radius-topleft tl
+  -webkit-border-top-left-radius tl
+  -moz-border-radius-topright tr
+  -webkit-border-top-right-radius tr
+  -moz-border-radius-bottomleft bl
+  -webkit-border-bottom-left-radius bl
+  -moz-border-radius-bottomright br
+  -webkit-border-bottom-right-radius br
+
+corner(px)
+  corner-each(px,px,px,px)
+
+corner-top(px)
+  corner-each(px,px,0,0)
+
+corner-bottom(px)
+  corner-each(0,0,px,px)
+
+corner-left(px)
+  corner-each(px,0,0,px)
+
+corner-right(px)
+  corner-each(0,px,px,0)
+////////////////////////////////////////////////
+
+/* Timeline
+-----------------------------------------------------------------------------*/
+.item-1
+  background-color: #22BEBE
+  .name
+    background-color: #22BEBE
+
+.item-2
+  background-color: #FF4040
+  .name
+    background-color: #FF4040
+
+.item-3
+  background-color: #8144D6
+  .name
+    background-color: #8144D6
+
+.item-4
+  background-color: #59EA3A
+  .name
+    background-color: #59EA3A
+
+.item-5
+  background-color: #4284D3
+  .name
+    background-color: #4284D3
+
+.item-6
+  background-color: #FFC140
+  .name
+    background-color: #FFC140
+
+body
+  background-color: #666
+
+header
+  float: left
+  width: 100%
+  background-color: #666
+  color: white
+  position: relative
+  top: 0
+  p.title
+    margin: 5px
+    font-size: 14px
+  
+
+.timelines-list
+  float: left
+  position: relative
+  width: 100%
+  overflow: hidden
+  ul
+    margin: 0
+    padding: 0
+    height: 30%
+  .timeline-item
+    display: block
+    border: 1px solid #AAA
+    padding: 15px
+    width: 100%
+    p.name
+      font-size: 14px
+      font-weight: bold
+      padding: 3px 10px
+      corner(4px)
+      color: white
+    div.event
+      font-size: 12px
+      box-shadow: 0px 0px 6px #505050;
+      display: inline-table
+      corner(5px)
+      margin: 3px
+      padding: 5px
+      bx-shadow(4px, #222)
+      bg-gradient(#eeeeee, #cccccc)
+
+//      background-color: PaleTurquoise
+
+/*
+ Darle estilo a el title de un elemento http://stackoverflow.com/questions/2011142/how-to-change-the-style-of-title-attribute-inside-the-anchor-tag 
+*/
+
+div.event:hover
+  color: red
+  font-size: 14px
+  position: relative
+
+div.event[title]:hover:after
+  font-size: 14px
+  content: attr(title)
+  padding: 4px 8px
+  color: #333
+  position: absolute
+  left: 20%
+  top: 50%
+  z-index: 20px
+  corner(5px)
+  border-radius: 5px
+  bx-shadow(4px, #222)  
+  bg-gradient(#eeeeee, #cccccc)
+
+.timelines-control
+  position: relative
+  float: left
+  bottom: 0px
+  width: 100%
+  background-color: #666
+  ul
+    float: left
+    color: white
+    width: 100%
+    p
+      margin: 5px
+      font-size: 14px
+    li
+      float: left
+      padding-left: 10px
+      padding-right: 10px
+
+/*
+.span-control
+  position: relative
+  height: 3%
+  width: 20%
+  border: 2px solid black
+  background: transparent
+*/  
+
+.ui-dialog-content
+  p
+    font-size: 12px
+  p.antecedentes
+    font-weight: bold
+  p.sintesis
+    text-align: justify
+  p.dptal
+    display:inline
+  p.oriente
+    display:inline
+  p.occidente
+    display:inline
+  p.aburra
+    display:inline

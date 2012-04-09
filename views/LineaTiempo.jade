@@ -1,0 +1,44 @@
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/lt.css')
+    link(rel='stylesheet', href='/javascripts/thirdparty/fancybox/fancybox/jquery.fancybox-1.3.4.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='/javascripts/thirdparty/jquery-ui/themes/base/jquery.ui.all.css')
+  body
+    header
+      p.title Línea de tiempo de los principales antecedentes en planeación estratégica
+
+    .timelines-list
+     ul
+       li.timeline-item.layout(style="display:none;")
+          p.name Nombre
+          p.event(style="display:none;") Evento
+    .timelines-control
+      .span-control
+        .years-list
+          ul
+            p Cada recuadro representa un antecedente, el número que se ve dentro es el año en el que ocurrió. Pase el puntero de mouse sobre los recuadros para ver el nombre del suceso, al darle click se despliega una descripción detallada. 
+    
+  // jQuery
+  script(src="/javascripts/thirdparty/jquery.js", type="text/javascript")
+
+  // jQuery UI
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.core.min.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.widget.min.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.position.min.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.mouse.min.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.draggable.min.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.dialog.min.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.resizable.min.js", type="text/javascript")
+
+  // jQuery TipTip
+  // http://code.drewwilson.com/entry/tiptip-jquery-plugin
+  script(src="/javascripts/thirdparty/jquery.tipTip.minified.js", type="text/javascript")
+
+  // Fancybox
+  script(src="/javascripts/thirdparty/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/fancybox/fancybox/jquery.easing-1.3.pack.js", type="text/javascript")
+  script(src="/javascripts/thirdparty/fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js", type="text/javascript")
+
+  script(src="/javascripts/client.js", type="text/javascript")
