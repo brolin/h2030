@@ -43,7 +43,8 @@ app.get('/EscenarioTerritorial', function(req, res){
 
 app.get('/Resultados', function(req, res){
   res.render('Resultados', {
-    title: 'Resultados'
+      title: 'Resultados',
+      layout: false
   });
 });
 

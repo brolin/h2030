@@ -1,3 +1,7 @@
+/* Reset
+Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+Removed elements not supported in HTML5
+-----------------------------------------------------------------------------*/
 html,
 body,
 div,
@@ -151,6 +155,38 @@ body {
 .content h2 {
   margin: 0;
 }
+.content_res {
+  float: left;
+  width: 96%;
+  padding: 20px 0;
+  margin: 0 0 0 2%;
+}
+.content_res h2 {
+  margin: 0;
+}
+.content_res table {
+  width: 100%;
+}
+.content_res table tbody {
+  border-width: 2px;
+  border-color: #000;
+  border-style: solid;
+}
+.content_res table tbody tr {
+  border-width: 2px;
+  border-color: #000;
+  border-style: solid;
+}
+.content_res table tbody tr td {
+  border-width: 2px;
+  border-color: #000;
+  border-style: solid;
+  padding: 4px;
+  margin: 4px;
+}
+#l1lesp {
+  background-color: #00f;
+}
 .aside {
   float: right;
   width: 19%;
@@ -249,11 +285,27 @@ header {
 .timelines-list .timeline-item p.name {
   font-size: 12px;
   padding: 3px 10px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
   color: #fff;
 }
 .timelines-list .timeline-item div.event {
   box-shadow: 0px 0px 6px #505050;
   display: inline-table;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
   margin: 3px;
   padding: 5px;
   background-color: PaleTurquoise;
@@ -281,4 +333,17 @@ header {
   width: 20%;
   border: 2px solid #000;
   background: transparent;
+}
+.linDet div {
+  border: 1px #000 solid;
+  margin: 6px;
+  padding: 4px;
+  -moz-border-radius-topleft: 3px;
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-bottomright: 3px;
+  -webkit-border-bottom-right-radius: 3px;
 }

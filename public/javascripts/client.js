@@ -79,10 +79,18 @@ $.widget("ui.DialogBox",{
     }
 });
 
+
 $(function() {
     $(".timelines-list").Timeline();
     $(".span-control").Control();
     var t=setTimeout("$(\".event\").DialogBox()",1000);
+});
+
+$(function() {
+    $( "#accordion" ).accordion({
+	collapsible: true,
+	active: false
+    });
 });
 
 /* Fancy box code */
@@ -109,3 +117,20 @@ $(document).ready(function() {
     });
     
 });
+
+function toggle_visibility(tbid,lnkid)
+{
+    var obj = $("table");
+    for(i=0;i<obj.length;i++)
+    {
+	if(obj[i].id && obj[i].id != tbid)
+	{
+	    document.getElementById(obj[i].id).style.display = "none";
+	    x = obj[i].id.substring(3);
+	    document.getElementById("lnk"+x).value = "[+] Expand";
+	}
+    }
+    if(document.all){document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "block" ? "none" : "block";}
+    else{document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "table" ? "none" : "table";}
+    document.getElementById(lnkid).value = document.getElementById(lnkid).value == "[-] Collapse" ? "[+] Expand" : "[-] Collapse";
+}

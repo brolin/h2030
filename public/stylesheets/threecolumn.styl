@@ -1,3 +1,51 @@
+////////////////////////////////////////////////
+//                   UTILS    
+////////////////////////////////////////////////
+
+corner-each(tl, tr, br, bl)
+  -moz-border-radius-topleft tl
+  -webkit-border-top-left-radius tl
+  -moz-border-radius-topright tr
+  -webkit-border-top-right-radius tr
+  -moz-border-radius-bottomleft bl
+  -webkit-border-bottom-left-radius bl
+  -moz-border-radius-bottomright br
+  -webkit-border-bottom-right-radius br
+
+corner(px)
+  corner-each(px,px,px,px)
+
+corner-top(px)
+  corner-each(px,px,0,0)
+
+corner-bottom(px)
+  corner-each(0,0,px,px)
+
+corner-left(px)
+  corner-each(px,0,0,px)
+
+corner-right(px)
+  corner-each(0,px,px,0)
+
+bx-shadow(shw-size, shw-color)
+  -moz-box-shadow: 0px 0px shw-size shw-color
+  -webkit-box-shadow: 0px 0px shw-size shw-color
+  box-shadow: 0px 0px shw-size shw-color
+
+bg-gradient(color1,color2)
+  background-image: -moz-linear-gradient(top, color1, color2)
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, color1),color-stop(1, color2))
+  background-image: -webkit-linear-gradient(top, color1, color2)
+  background-image: -moz-linear-gradient(top, color1, color2)
+  background-image: -ms-linear-gradient(top, color1, color2)
+  background-image: -o-linear-gradient(top, color1, color2)
+
+////////////////////////////////////////////////
+
+/* Reset
+Based on http://meyerweb.com/eric/thoughts/2008/01/15/resetting-again/
+Removed elements not supported in HTML5
+-----------------------------------------------------------------------------*/
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, address, cite, code,
@@ -109,10 +157,35 @@ body
   width 54%
   padding 20px 0
   margin 0 0 0 2%
-
-.content
   h2
     margin 0 
+
+.content_res
+  float left
+  width 96%
+  padding 20px 0
+  margin 0 0 0 2%
+  h2
+    margin 0
+  table
+    width: 100%
+    tbody
+      border-width: 2px
+      border-color: black
+      border-style: solid 
+      tr
+        border-width: 2px
+        border-color: black
+        border-style: solid 
+        td
+          border-width: 2px
+          border-color: black
+          border-style: solid 
+          padding: 4px
+          margin: 4px
+
+#l1lesp
+  background-color: blue
 
 .aside
   float right
@@ -238,4 +311,10 @@ header
   width: 20%
   border: 2px solid black
   background: transparent
-  
+
+.linDet
+  div
+    border: 1px black solid
+    margin: 6px
+    padding: 4px
+    corner(3px)

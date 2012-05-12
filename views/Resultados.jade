@@ -1,3 +1,81 @@
-h1 Resultados
-br
-p Página en construcción
+!!! 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/threecolumn.css')
+    link(rel='stylesheet', href='/javascripts/thirdparty/fancybox/fancybox/jquery.fancybox-1.3.4.css', type='text/css', media='screen')
+    link(rel='stylesheet', href='/javascripts/thirdparty/jquery-ui/themes/base/jquery.ui.all.css')
+  body
+    div.container
+      div.header
+        img(src='/images/fondoCorto.png')
+      div.navigation
+        nav
+          ul
+            li
+              a(href="/") Horizontes 2030
+            li
+              a(href="/EscenarioTerritorial") Escenario Territorial
+            li
+              a(href="/LineaTiempo",alt="Línea de tiempo de antecedentes en planificación",target="blank") Línea de tiempo
+            li
+              a(href="/Resultados") Resultados
+      div.content-container1
+        div.content_res
+          h1 Resultados
+          br
+          p Los planteamientos de  los  lineamientos estratégicos de HORIZONTES 2030, pretenden servir de marco general para los planes de desarrollo de los Municipios, el Departamento, entidades de orden público, sector privado y comunitario, que estén dispuestas a realizar replanteamientos en los esquemas de relacionamiento, en las políticas de responsabilidad social y en un nuevo liderazgo para lograr la equidad, reconstruir el tejido social y generar la  cohesión  social,  económica  e  institucional  necesarios  para  nuestro  departamento.  El llamado es a que instituciones e individuos modifiquen la forma como se relacionan sobre la base del  respeto,  la solidaridad y  la corresponsabilidad como valores básicos para el desarrollo humano integral en Antioquia. 
+          br
+          h1 Lineamientos Estratégicos Estructurantes
+          div#accordion
+            h3
+              a(href="#") Propiciar la articulación de los municipios del proyecto HORIZONTES 2030 a través de la Planeación y el Ordenamiento del territorio.
+            div!= partial('linEst1.jade')
+            h3
+              a(href="#") Desarrollar sistemas productivos territoriales que avancen hacia la producción y la redistribución de la riqueza y que potencien las capacidades locales y regionales, en los territorios del proyecto HORIZONTES 2030.
+            div!= partial('linEst2.jade')
+            h3
+              a(href="#") Propender por configuraciones territoriales que transformen sinérgicamente las relaciones rural-urbanas en los municipios del proyecto HORIZONTES 2030.
+            div!= partial('linEst3.jade')
+            h3
+              a(href="#") Implementar un modelo de inclusión y equidad en el ámbito territorial del proyecto HORIZONTES 2030.
+            div!= partial('linEst4.jade')
+            h3
+              a(href="#") Configurar una red de instituciones, para la gestión del desarrollo en los territorios del proyecto HORIZONTES 2030
+            div!= partial('linEst5.jade')
+            h3
+              a(href="#") Promover la articulación de los municipios del proyecto HORIZONTES 2030 entre sí, con el Departamento, la Nación  y el mundo.
+                td Promover la articulación de los municipios del proyecto HORIZONTES 2030 entre sí, con el Departamento, la Nación  y el mundo.
+            div!= partial('linEst6.jade')
+            h3
+              a(href="#") Fomentar un proyecto de Cultura y sociedad, para el desarrollo en el ámbito territorial del proyecto HORIZONTES 2030.
+            div!= partial('linEst7.jade')
+            h3
+              a(href="#") Propiciar el desarrollo sostenible, la previsión del riesgo y la adaptación al cambio climático en los territorios del proyecto HORIZONTES 2030.
+            div!= partial('linEst8.jade')
+
+        div.footer
+          img(src='/images/tiraLogos.jpg')
+    // jQuery
+    script(src="/javascripts/thirdparty/jquery.js", type="text/javascript")
+
+    // jQuery UI
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.core.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.widget.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.accordion.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.position.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.mouse.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.draggable.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.dialog.min.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/jquery-ui/jquery.ui.resizable.min.js", type="text/javascript")
+
+    // jQuery TipTip
+    // http://code.drewwilson.com/entry/tiptip-jquery-plugin
+    script(src="/javascripts/thirdparty/jquery.tipTip.minified.js", type="text/javascript")
+
+    // Fancybox
+    script(src="/javascripts/thirdparty/fancybox/fancybox/jquery.fancybox-1.3.4.pack.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/fancybox/fancybox/jquery.easing-1.3.pack.js", type="text/javascript")
+    script(src="/javascripts/thirdparty/fancybox/fancybox/jquery.mousewheel-3.0.4.pack.js", type="text/javascript")
+
+    script(src="/javascripts/client.js", type="text/javascript")
