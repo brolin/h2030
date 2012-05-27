@@ -89,7 +89,11 @@ $(function() {
 $(function() {
     $( "#accordion" ).accordion({
 	collapsible: true,
-	active: false
+	active: false,
+        fillspace: true,
+        autoheight: false,
+        navigation: true,
+        clearStyle: true 
     });
 });
 
@@ -118,19 +122,3 @@ $(document).ready(function() {
     
 });
 
-function toggle_visibility(tbid,lnkid)
-{
-    var obj = $("table");
-    for(i=0;i<obj.length;i++)
-    {
-	if(obj[i].id && obj[i].id != tbid)
-	{
-	    document.getElementById(obj[i].id).style.display = "none";
-	    x = obj[i].id.substring(3);
-	    document.getElementById("lnk"+x).value = "[+] Expand";
-	}
-    }
-    if(document.all){document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "block" ? "none" : "block";}
-    else{document.getElementById(tbid).style.display = document.getElementById(tbid).style.display == "table" ? "none" : "table";}
-    document.getElementById(lnkid).value = document.getElementById(lnkid).value == "[-] Collapse" ? "[+] Expand" : "[-] Collapse";
-}

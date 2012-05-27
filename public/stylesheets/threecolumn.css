@@ -347,3 +347,9 @@ header {
   -moz-border-radius-bottomright: 3px;
   -webkit-border-bottom-right-radius: 3px;
 }
+.linDet div ul li {
+  list-style-position: inside;
+}
+.linDet div .partReg {
+  background-color: rgba(138,151,149,0.61);
+}
